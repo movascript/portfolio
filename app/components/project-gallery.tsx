@@ -197,6 +197,9 @@ export function ProjectGallery({ images }: Props) {
               overflow-hidden
               bg-black/95
               backdrop-blur-xl
+              animate-in
+              fade-in
+              duration-200
             "
           >
             <button
