@@ -1,3 +1,4 @@
+import GoHomeLink from "../components/go-home-link";
 import { PageTransition } from "../components/page-transition";
 import { Section } from "../components/section";
 
@@ -58,6 +59,7 @@ export default function ContactPage() {
           </div>
         </div>
       </Section>
+      <GoHomeLink />
     </PageTransition>
   );
 }

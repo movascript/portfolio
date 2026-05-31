@@ -1,49 +1,7 @@
+import { experiences, technologies } from "@/data/about";
+import GoHomeLink from "../components/go-home-link";
 import { PageTransition } from "../components/page-transition";
 import { Section } from "../components/section";
-
-const technologies = [
-  "React",
-  "Next.js",
-  "TypeScript",
-  "Zustand",
-  "Tailwind",
-  "shadcn/ui",
-  "Framer Motion",
-  "Preact",
-  "Tauri",
-  "PWA Architecture",
-];
-
-const experiences = [
-  {
-    title: "Frontend Developer",
-    company: "Nekoo Pardazan Sepehr",
-    period: "Dec 2023 — Aug 2024",
-    description:
-      "Worked on a university PWA platform designed for students, professors, and staff. The platform included real-time chat systems, course scheduling, score tracking, and event management.",
-  },
-  {
-    title: "Frontend Team Lead",
-    company: "Olgoo",
-    period: "Aug 2024 — Jan 2025",
-    description:
-      "Led frontend development for a startup focused on inventory management and analytics for clothing manufacturers. Built dashboards, analytics systems, and production management workflows.",
-  },
-  {
-    title: "Frontend Developer",
-    company: "Digibuilding",
-    period: "Jan 2025 — Feb 2025",
-    description:
-      "Designed and developed a modern landing page experience focused on SEO, minimal design, and performance optimization.",
-  },
-  {
-    title: "Frontend Engineer",
-    company: "Report Plus",
-    period: "Apr 2025 — Present",
-    description:
-      "Building a PWA platform for supervising construction engineers to digitize inspection reports, paperwork, and municipality workflows.",
-  },
-];
 
 export default function AboutPage() {
   return (
@@ -107,7 +65,7 @@ export default function AboutPage() {
               {technologies.map((item) => (
                 <div
                   key={item}
-                  className="rounded-full border border-white/10 bg-white/[0.03] px-5 py-3 text-sm text-white/70"
+                  className="rounded-full border border-white/10 bg-white/3 px-5 py-3 text-sm text-white/70"
                 >
                   {item}
                 </div>
@@ -149,6 +107,7 @@ export default function AboutPage() {
           </div>
         </div>
       </Section>
+      <GoHomeLink />
     </PageTransition>
   );
 }

@@ -1,5 +1,7 @@
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { projects } from "@/data/projects";
+import GoHomeLink from "../components/go-home-link";
 import { PageTransition } from "../components/page-transition";
 import { Section } from "../components/section";
 
@@ -33,6 +35,7 @@ export default function ProjectsPage() {
           ))}
         </div>
       </Section>
+      <GoHomeLink />
     </PageTransition>
   );
 }

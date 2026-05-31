@@ -27,7 +27,7 @@ export default function HomePage() {
           </p>
 
           <div className="flex items-center justify-center gap-4 pt-8 flex-wrap">
-            <Link
+            {/* <Link
               href="/projects"
               className="border border-white/10 bg-white/5 hover:bg-white hover:text-black transition rounded-full px-6 py-3 text-sm"
             >
@@ -39,14 +39,14 @@ export default function HomePage() {
               className="border border-white/10 hover:border-white/30 transition rounded-full px-6 py-3 text-sm text-white/70"
             >
               about me
-            </Link>
+            </Link> */}
 
-            <a
+            {/* <a
               href="/resume.pdf"
               className="border border-white/10 hover:border-white/30 transition rounded-full px-6 py-3 text-sm text-white/70"
             >
               resume
-            </a>
+            </a> */}
           </div>
         </div>
       </section>

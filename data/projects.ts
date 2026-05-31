@@ -5,6 +5,7 @@ export type Project = {
   content: string[];
   tech: string[];
   github: string;
+  screenshots: string[];
   live?: string;
 };
 
@@ -19,6 +20,13 @@ export const projects: Project[] = [
     live: "https://lowcall.ir",
 
     tech: ["React", "Vite", "Tailwind", "Socket.io", "WebRTC", "WebSocket"],
+
+    screenshots: [
+      "/lowcall/screenshot-1.png",
+      "/lowcall/screenshot-2.png",
+      "/lowcall/screenshot-3.png",
+      "/lowcall/screenshot-4.png",
+    ],
 
     content: [
       "Lowcall started as a personal necessity during internet shutdowns. I needed a fast and secure way to stay connected with family and friends, so I built a lightweight WebRTC-based video calling platform focused on simplicity and speed.",
@@ -40,6 +48,12 @@ export const projects: Project[] = [
     github: "https://github.com/movascript/dns-switcher",
 
     tech: ["Tauri", "React", "TypeScript", "Tailwind", "Rust", "Tokio"],
+
+    screenshots: [
+      "/dns-switcher/screenshot-1.png",
+      "/dns-switcher/screenshot-2.png",
+      "/dns-switcher/screenshot-3.png",
+    ],
 
     content: [
       "DNS Switcher is a lightweight desktop utility created to simplify changing DNS servers on Windows. Instead of manually editing settings and typing IP addresses repeatedly, users can switch configurations instantly.",

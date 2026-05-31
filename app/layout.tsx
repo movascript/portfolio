@@ -5,7 +5,7 @@ import { Background } from "./components/background";
 import { Navbar } from "./components/navbar";
 
 export const metadata: Metadata = {
-  title: "Mohsen Vahedi • Frontend Engineer",
+  title: "Mohammad Valadi • Frontend Engineer",
   description:
     "Frontend Engineer focused on performant interfaces, cinematic interactions, and scalable web experiences.",
 };

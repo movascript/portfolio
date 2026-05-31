@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-
 import { PageTransition } from "@/app/components/page-transition";
-
+import { ProjectGallery } from "@/app/components/project-gallery";
 import { projects } from "@/data/projects";
 
 type Props = {
@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: `${project.title} • Mohsen Vahedi`,
+    title: `${project.title} • Mohammad Valadi`,
     description: project.description,
   };
 }
@@ -105,11 +105,7 @@ export default async function SingleProjectPage({ params }: Props) {
                 </p>
               ))}
 
-              <div className="grid sm:grid-cols-2 gap-6 pt-8">
-                <div className="aspect-video rounded-3xl border border-white/10 bg-white/3" />
-                <div className="aspect-video rounded-3xl border border-white/10 bg-white/3" />
-                <div className="aspect-video rounded-3xl border border-white/10 bg-white/3" />
-              </div>
+              <ProjectGallery images={project.screenshots} />
             </div>
 
             <div className="space-y-6">
@@ -121,7 +117,7 @@ export default async function SingleProjectPage({ params }: Props) {
                 {project.tech.map((item) => (
                   <div
                     key={item}
-                    className="rounded-full border border-white/10 px-4 py-2 text-sm text-white/60 bg-white/[0.02]"
+                    className="rounded-full border border-white/10 px-4 py-2 text-sm text-white/60 bg-white/2"
                   >
                     {item}
                   </div>
