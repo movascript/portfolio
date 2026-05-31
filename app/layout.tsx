@@ -5,8 +5,9 @@ import { Background } from "./components/background";
 import { Navbar } from "./components/navbar";
 
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "Minimal space portfolio",
+  title: "Mohsen Vahedi • Frontend Engineer",
+  description:
+    "Frontend Engineer focused on performant interfaces, cinematic interactions, and scalable web experiences.",
 };
 
 export default function RootLayout({
@@ -17,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-black text-white antialiased overflow-x-hidden">
-        <div className="absolute w-full h-full">
+        <div className="absolute inset-0">
           <Background />
         </div>
 

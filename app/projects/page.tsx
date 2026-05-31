@@ -1,26 +1,7 @@
 import Link from "next/link";
-
+import { projects } from "@/data/projects";
 import { PageTransition } from "../components/page-transition";
 import { Section } from "../components/section";
-
-const projects = [
-  {
-    slug: "messaging-platform",
-    title: "Messaging Platform",
-    description:
-      "Real-time communication platform built with scalable architecture.",
-  },
-  {
-    slug: "developer-dashboard",
-    title: "Developer Dashboard",
-    description: "Minimal analytics dashboard with animated interactions.",
-  },
-  {
-    slug: "ai-workspace",
-    title: "AI Workspace",
-    description: "Clean productivity experience focused on speed and clarity.",
-  },
-];
 
 export default function ProjectsPage() {
   return (

@@ -1,32 +1,151 @@
 import { PageTransition } from "../components/page-transition";
 import { Section } from "../components/section";
 
+const technologies = [
+  "React",
+  "Next.js",
+  "TypeScript",
+  "Zustand",
+  "Tailwind",
+  "shadcn/ui",
+  "Framer Motion",
+  "Preact",
+  "Tauri",
+  "PWA Architecture",
+];
+
+const experiences = [
+  {
+    title: "Frontend Developer",
+    company: "Nekoo Pardazan Sepehr",
+    period: "Dec 2023 — Aug 2024",
+    description:
+      "Worked on a university PWA platform designed for students, professors, and staff. The platform included real-time chat systems, course scheduling, score tracking, and event management.",
+  },
+  {
+    title: "Frontend Team Lead",
+    company: "Olgoo",
+    period: "Aug 2024 — Jan 2025",
+    description:
+      "Led frontend development for a startup focused on inventory management and analytics for clothing manufacturers. Built dashboards, analytics systems, and production management workflows.",
+  },
+  {
+    title: "Frontend Developer",
+    company: "Digibuilding",
+    period: "Jan 2025 — Feb 2025",
+    description:
+      "Designed and developed a modern landing page experience focused on SEO, minimal design, and performance optimization.",
+  },
+  {
+    title: "Frontend Engineer",
+    company: "Report Plus",
+    period: "Apr 2025 — Present",
+    description:
+      "Building a PWA platform for supervising construction engineers to digitize inspection reports, paperwork, and municipality workflows.",
+  },
+];
+
 export default function AboutPage() {
   return (
     <PageTransition>
       <Section title="about">
-        <div className="grid lg:grid-cols-2 gap-20">
-          <div className="space-y-6">
-            <h1 className="text-4xl sm:text-6xl font-light leading-tight">
-              I create modern frontend experiences.
-            </h1>
+        <div className="space-y-32">
+          <div className="grid lg:grid-cols-2 gap-20">
+            <div className="space-y-6">
+              <h1 className="text-4xl sm:text-6xl font-light leading-tight">
+                Frontend engineer obsessed with performance, motion, and clean
+                architecture.
+              </h1>
 
-            <p className="text-white/50 leading-8">
-              I focus on building performant interfaces with clean systems,
-              scalable architecture, and smooth user interactions.
-            </p>
+              <p className="text-white/50 leading-8">
+                Programming was never accidental for me. I’ve been fascinated by
+                computers since childhood, and started learning web development
+                around the age of 14 after discovering HTML through a family
+                member who worked in tech.
+              </p>
+            </div>
+
+            <div className="space-y-8 text-white/60 leading-8">
+              <p>
+                Before college, I was already building small websites with HTML,
+                CSS, JavaScript, PHP, and Python. But things became serious when
+                I started learning React, Next.js, C++, scalable frontend
+                architecture, PWAs, and real-time systems.
+              </p>
+
+              <p>
+                I mainly enjoy building admin panels, chat applications,
+                real-time systems, WebRTC experiences, and highly interactive
+                interfaces with cinematic motion and strong UX.
+              </p>
+
+              <p>
+                The things I care about most are simplicity, architecture,
+                performance, animation, and creating products that genuinely
+                feel good to use.
+              </p>
+
+              <p>
+                Even though I can work across the stack, frontend engineering is
+                where I feel most creative and most focused.
+              </p>
+            </div>
           </div>
 
-          <div className="space-y-10 text-white/60 leading-8">
-            <p>
-              Working mainly with React, Next.js, TypeScript, Tailwind, and
-              animation libraries.
-            </p>
+          <div className="space-y-10">
+            <div className="space-y-3">
+              <p className="text-sm uppercase tracking-[0.3em] text-white/40">
+                Tech Stack
+              </p>
 
-            <p>
-              Interested in minimalism, motion design, performance, and design
-              systems.
-            </p>
+              <h2 className="text-3xl font-light">
+                Technologies I enjoy working with.
+              </h2>
+            </div>
+
+            <div className="flex flex-wrap gap-3">
+              {technologies.map((item) => (
+                <div
+                  key={item}
+                  className="rounded-full border border-white/10 bg-white/[0.03] px-5 py-3 text-sm text-white/70"
+                >
+                  {item}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="space-y-14">
+            <div className="space-y-3">
+              <p className="text-sm uppercase tracking-[0.3em] text-white/40">
+                Experience
+              </p>
+
+              <h2 className="text-3xl font-light">
+                A timeline of projects and positions.
+              </h2>
+            </div>
+
+            <div className="space-y-10">
+              {experiences.map((experience) => (
+                <div
+                  key={experience.company}
+                  className="border-l border-white/10 pl-8 space-y-3"
+                >
+                  <div>
+                    <h3 className="text-2xl font-light">{experience.title}</h3>
+
+                    <p className="text-white/40 text-sm mt-1">
+                      {experience.company} • {experience.period}
+                    </p>
+                  </div>
+
+                  <p className="text-white/60 leading-8 max-w-3xl">
+                    {experience.description}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </Section>
