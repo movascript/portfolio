@@ -26,6 +26,7 @@ export default function RootLayout({
           color="#9587fd"
           showSpinner={false}
           shadow="0 0 10px #9587fd,0 0 5px #9587fd"
+          height={1}
         />
         <div className="absolute inset-0">
           <Background />

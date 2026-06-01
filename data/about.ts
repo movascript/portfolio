@@ -4,11 +4,18 @@ export const technologies = [
   "TypeScript",
   "Zustand",
   "Tailwind",
-  "shadcn/ui",
+  "Shadcn/ui",
+  "Vite",
   "Framer Motion",
   "Preact",
   "Tauri",
-  "PWA Architecture",
+  "Zod",
+  "Express",
+  "WebRTC",
+  "WebScoket",
+  "PWA",
+  "Docker",
+  "Nginx",
 ];
 
 export const experiences = [

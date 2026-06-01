@@ -14,9 +14,8 @@ export const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50">
+    <header className="sticky top-0 z-50 select-none">
       <div className="flex justify-between items-center pt-8 px-6 sm:px-10 lg:px-20">
-        {/* Identity anchor */}
         <Link
           href="/"
           className="text-sm tracking-[0.2em] text-white/40 hover:text-white transition duration-300 uppercase"
