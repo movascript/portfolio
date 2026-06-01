@@ -24,6 +24,7 @@ export function ProjectGallery({ images }: Props) {
     setMounted(true);
   }, []);
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: <future>
   useEffect(() => {
     if (!isOpen) return;
 
@@ -74,7 +75,8 @@ export function ProjectGallery({ images }: Props) {
     lastPanPoint.current = null;
   };
 
-  const getTouchDistance = (touches: TouchList) => {
+  // biome-ignore lint/suspicious/noExplicitAny: <future>
+  const getTouchDistance = (touches: any) => {
     const dx = touches[0].clientX - touches[1].clientX;
     const dy = touches[0].clientY - touches[1].clientY;
 

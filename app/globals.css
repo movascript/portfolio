@@ -3,6 +3,7 @@
 
 :root {
   color-scheme: dark;
+  forced-color-adjust: none;
 }
 
 html {
