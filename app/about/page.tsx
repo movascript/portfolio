@@ -83,7 +83,7 @@ export default function AboutPage() {
                   }}
                 />
 
-                <div className="absolute bottom-5 left-5 right-5 flex justify-left items-end gap-2">
+                <div className="absolute bottom-4 left-4 right-4 flex justify-left items-end gap-4">
                   <div className="w-10 h-10">
                     {/** biome-ignore lint/performance/noImgElement: <future> */}
                     <img

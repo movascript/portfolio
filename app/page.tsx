@@ -14,7 +14,7 @@ export default function HomePage() {
             <h1 className="text-5xl sm:text-7xl lg:text-8xl font-light tracking-tight leading-none">
               Building <span className="text-accent">fast,</span>
               <br />
-              cinematic web experiences.
+              awesome web experiences.
             </h1>
           </div>
 

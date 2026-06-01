@@ -249,7 +249,6 @@ export function ProjectGallery({ images }: Props) {
                     left-4
                     top-1/2
                     z-20
-                    hidden
                     -translate-y-1/2
                     rounded-full
                     border
@@ -261,7 +260,6 @@ export function ProjectGallery({ images }: Props) {
                     transition
                     hover:bg-white/10
                     hover:text-white
-                    md:block
                   "
                 >
                   <ArrowLeft />
@@ -283,7 +281,6 @@ export function ProjectGallery({ images }: Props) {
                     right-4
                     top-1/2
                     z-20
-                    hidden
                     -translate-y-1/2
                     rounded-full
                     border
@@ -295,7 +292,6 @@ export function ProjectGallery({ images }: Props) {
                     transition
                     hover:bg-white/10
                     hover:text-white
-                    md:block
                   "
                 >
                   <ArrowRight />

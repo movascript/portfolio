@@ -1,7 +1,5 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
-
 export const Section = ({
   title,
   children,
@@ -9,8 +7,6 @@ export const Section = ({
   title: string;
   children: React.ReactNode;
 }) => {
-  const reduced = useReducedMotion();
-
   return (
     <section className="max-w-5xl mx-auto py-32">
       <div className="space-y-12">
@@ -21,17 +17,7 @@ export const Section = ({
           </h2>
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: reduced ? 0 : 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{
-            duration: reduced ? 0.1 : 0.6,
-            delay: 0.1,
-            ease: [0.22, 1, 0.36, 1],
-          }}
-        >
-          {children}
-        </motion.div>
+        {children}
       </div>
     </section>
   );
