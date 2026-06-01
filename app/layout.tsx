@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+import NextTopLoader from "nextjs-toploader";
 import { Background } from "./components/background";
 import { Navbar } from "./components/navbar";
 
@@ -21,6 +22,11 @@ export default function RootLayout({
         <meta name="color-scheme" content="dark" />
       </head>
       <body className="bg-black text-white antialiased overflow-x-hidden">
+        <NextTopLoader
+          color="#9587fd"
+          showSpinner={false}
+          shadow="0 0 10px #9587fd,0 0 5px #9587fd"
+        />
         <div className="absolute inset-0">
           <Background />
         </div>
