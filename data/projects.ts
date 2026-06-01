@@ -184,4 +184,184 @@ export const projects: Project[] = [
       "The project became an exploration of frontend engineering beyond the browser. It pushed me into desktop runtime architecture, native system communication, and performance-oriented UX decisions.",
     ],
   },
+  {
+    slug: "anonchat",
+
+    title: "AnonChat",
+
+    description:
+      "Experimental end-to-end encrypted realtime messaging platform built during wartime to explore secure peer communication without centralized data storage.",
+
+    year: "2026",
+    category: "Secure Communication",
+
+    cover: "/anonchat/screenshot-1.png",
+
+    github: "https://github.com/movascript/anon-chat",
+
+    tech: [
+      "React",
+      "Express",
+      "WebSocket",
+      "TypeScript",
+      "Tailwind",
+      "IndexedDB",
+      "TanStack Router",
+      "Monorepo",
+    ],
+
+    features: [
+      "Direct websocket-based realtime messaging",
+      "Custom client and server websocket architecture",
+      "Experimental end-to-end encryption pipeline",
+      "Client-side persistent message storage",
+      "Database-free relay-oriented backend design",
+      "Offline-resistant local synchronization flow",
+    ],
+
+    architecture: [
+      {
+        title: "Raw WebSocket Communication Layer",
+        description:
+          "Instead of relying on abstractions like Socket.io, the entire realtime communication layer was implemented directly on top of native WebSockets. Custom client and server classes handled connection state, event dispatching, message routing, and callback synchronization.",
+      },
+
+      {
+        title: "End-to-End Encryption Pipeline",
+        description:
+          "The platform was designed around the idea that even the server should not be able to read user messages. Encryption and key exchange logic were handled on the client side, while the backend acted purely as a transport relay between peers.",
+      },
+
+      {
+        title: "Client-Side Persistence Architecture",
+        description:
+          "Because the backend intentionally avoided storing user data, message persistence and synchronization had to be managed entirely inside the browser using IndexedDB. A large part of the architecture focused on preventing state corruption and maintaining reliable local reads and writes.",
+      },
+    ],
+
+    challenges: [
+      "Managing realtime websocket state without higher-level abstractions like Socket.io.",
+      "Designing client-side persistence flows without relying on server-side databases.",
+      "Handling synchronization between encrypted local state and active peer sessions.",
+      "Balancing privacy-focused architecture with practical usability constraints.",
+    ],
+
+    notes: [
+      "This project started during wartime as an attempt to build a more secure communication channel for family and close contacts.",
+      "The project remains intentionally unfinished due to the complexity of the encryption and synchronization architecture.",
+      "A large part of the engineering effort involved experimentation, protocol design, and debugging low-level realtime systems.",
+      "Even unfinished, the project became one of my most technically challenging frontend experiences.",
+    ],
+
+    screenshots: [
+      "/anonchat/screenshot-1.png",
+      "/anonchat/screenshot-2.png",
+      "/anonchat/screenshot-3.png",
+      "/anonchat/screenshot-4.png",
+      "/anonchat/screenshot-5.png",
+      "/anonchat/screenshot-6.png",
+      "/anonchat/screenshot-7.png",
+      "/anonchat/screenshot-8.png",
+      "/anonchat/screenshot-9.png",
+      "/anonchat/screenshot-10.png",
+    ],
+
+    content: [
+      "AnonChat started during the war when secure and private communication became far more important than convenience. I wanted to build a messaging platform that minimized trust in the server itself and explored what fully client-controlled communication could look like.",
+
+      "Instead of using Socket.io or other abstractions, I implemented the websocket communication layer manually on both the client and server. This forced me to deeply understand connection management, event routing, callback systems, and realtime synchronization at a much lower level.",
+
+      "One of the most difficult parts of the project was handling persistence entirely on the client side. Since the server intentionally avoided storing messages, IndexedDB became responsible for local state management, synchronization, and recovery without corrupting data flow.",
+
+      "The project also explored end-to-end encryption concepts where messages would be encrypted before leaving the browser, allowing the backend to function only as a relay. While the full encryption pipeline was never completely finished, working through the architecture taught me an enormous amount about cryptography, realtime systems, and frontend state reliability.",
+    ],
+  },
+
+  {
+    slug: "share-text",
+
+    title: "ShareText",
+
+    description:
+      "Minimal encrypted text sharing platform built with Next.js for securely exchanging temporary content through private links without authentication.",
+
+    year: "2026",
+    category: "Privacy-Focused Utility",
+
+    cover: "/share-text/screenshot-1.png",
+
+    github: "https://github.com/movascript/share-text",
+
+    tech: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Drizzle ORM",
+      "PostgreSQL",
+      "Tailwind",
+      "Biome",
+      "Docker",
+      "React Compiler",
+    ],
+
+    features: [
+      "Temporary text sharing through unique links",
+      "Optional password-protected encrypted content",
+      "Automatic expiration and cleanup flow",
+      "Client-side encryption and decryption",
+      "Authentication-free minimal user experience",
+      "Server Actions based architecture without manual fetch calls",
+    ],
+
+    architecture: [
+      {
+        title: "Client-Side Encryption Flow",
+        description:
+          "Sensitive content was encrypted directly inside the browser before ever reaching the server. The backend only stored encrypted payloads, ensuring the platform owner could never read the shared content.",
+      },
+
+      {
+        title: "Next.js Server Functions Architecture",
+        description:
+          "The project heavily explored modern Next.js patterns using Server Actions instead of traditional REST APIs. Data mutations and retrieval happened through framework-native server functions without manually writing fetch layers.",
+      },
+
+      {
+        title: "Minimal Temporary Storage System",
+        description:
+          "The backend was intentionally kept lightweight. Shared content could optionally expire after a specified duration, automatically removing inaccessible data while preserving a fast and minimal workflow.",
+      },
+    ],
+
+    challenges: [
+      "Implementing reliable client-side encryption and password-based decryption flows.",
+      "Designing secure content sharing without exposing plaintext data to the backend.",
+      "Managing cryptographic operations while preserving a simple user experience.",
+      "Learning and structuring larger-scale Next.js server-side architecture patterns.",
+    ],
+
+    notes: [
+      "The project focused heavily on privacy through architecture rather than through visual complexity.",
+      "A surprising amount of the engineering effort went into encryption edge cases and browser-side data handling.",
+      "This project became one of my deeper explorations into modern Next.js application architecture.",
+      "Using Server Actions instead of manually building API layers made the development experience far cleaner than expected.",
+    ],
+
+    screenshots: [
+      "/share-text/screenshot-1.png",
+      "/share-text/screenshot-2.png",
+      "/share-text/screenshot-3.png",
+      "/share-text/screenshot-4.png",
+    ],
+
+    content: [
+      "ShareText was designed around a very simple idea: sending text securely through temporary links without requiring accounts, onboarding, or unnecessary friction. The experience was intentionally minimal so users could create and share content instantly.",
+
+      "What made the project technically interesting was the encryption model. Sensitive content was encrypted directly inside the browser before being uploaded, meaning the server only ever handled encrypted payloads rather than readable user data.",
+
+      "If password protection was enabled, decryption also happened entirely on the client side after the recipient opened the shared link. The backend acted purely as a storage layer and never had access to plaintext content.",
+
+      "The project also became an opportunity to deeply explore Next.js architecture patterns. Using Server Actions instead of traditional API routes dramatically simplified the data flow and created a surprisingly clean developer experience without manually writing fetch requests throughout the application.",
+    ],
+  },
 ];
