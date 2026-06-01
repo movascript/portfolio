@@ -339,10 +339,10 @@ export function ProjectGallery({ images }: Props) {
                   will-change-transform
                   transition-transform
                   duration-75
+                  origin-center
                 "
                 style={{
                   transform: `translate(${translate.x}px, ${translate.y}px) scale(${scale})`,
-                  transformOrigin: "center center",
                 }}
               />
             </div>
