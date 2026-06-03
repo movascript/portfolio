@@ -7,8 +7,6 @@ import GoHomeLink from "../components/go-home-link";
 import { PageTransition } from "../components/page-transition";
 import { Section } from "../components/section";
 
-// ─── Icons ────────────────────────────────────────────────────────────────────
-
 function IconMail() {
   return (
     <svg
@@ -180,8 +178,6 @@ function ContactCard({
   );
 }
 
-// ─── Status Dot ───────────────────────────────────────────────────────────────
-
 function StatusDot() {
   return (
     <span className="relative flex h-2 w-2">
@@ -191,15 +187,11 @@ function StatusDot() {
   );
 }
 
-// ─── Context Pills ────────────────────────────────────────────────────────────
-
 const contextItems = [
   { text: "Based in Tehran, Iran" },
   { text: "Computer engineering student" },
   { text: "Open to remote collaboration" },
 ];
-
-// ─── Page ─────────────────────────────────────────────────────────────────────
 
 export default function ContactPage() {
   const [mounted, setMounted] = useState(false);

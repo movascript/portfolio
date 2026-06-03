@@ -20,7 +20,7 @@ export const technologies = [
 
 export const experiences = [
   {
-    title: "Frontend Developer",
+    title: "Frontend Engineer",
     company: "Nekoo Pardazan Sepehr",
     period: "Dec 2023 — Aug 2024",
     description:

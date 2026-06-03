@@ -57,7 +57,6 @@ export const Navbar = () => {
       className="fixed inset-x-0 top-0 z-50 select-none"
     >
       <div className="relative flex items-center justify-between px-6 pt-8 sm:px-10 lg:px-20">
-        {/* LOGO */}
         <Link
           href="/"
           className="text-sm uppercase tracking-[0.24em] text-white/35 transition-colors duration-300 hover:text-white"

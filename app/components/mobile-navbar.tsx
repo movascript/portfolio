@@ -74,7 +74,6 @@ export const MobileNavbar = ({ pathname }: Props) => {
 
   return (
     <div ref={wrapperRef} className="relative md:hidden">
-      {/* MOBILE BUTTON */}
       <button
         type="button"
         aria-label="Toggle menu"
@@ -100,7 +99,6 @@ export const MobileNavbar = ({ pathname }: Props) => {
         "
       >
         <div className="relative h-5 w-5">
-          {/* TOP */}
           <motion.span
             animate={
               mobileOpen
@@ -128,7 +126,6 @@ export const MobileNavbar = ({ pathname }: Props) => {
             "
           />
 
-          {/* MIDDLE */}
           <motion.span
             animate={
               mobileOpen
@@ -157,7 +154,6 @@ export const MobileNavbar = ({ pathname }: Props) => {
             "
           />
 
-          {/* BOTTOM */}
           <motion.span
             animate={
               mobileOpen
@@ -190,7 +186,6 @@ export const MobileNavbar = ({ pathname }: Props) => {
       <AnimatePresence>
         {mobileOpen && (
           <>
-            {/* BACKDROP */}
             <motion.div
               onClick={() => setMobileOpen(false)}
               initial={{ opacity: 0 }}
@@ -200,7 +195,6 @@ export const MobileNavbar = ({ pathname }: Props) => {
               className="fixed inset-0 z-30 bg-black/30 backdrop-blur-sm"
             />
 
-            {/* MENU */}
             <motion.nav
               ref={menuRef}
               initial={{
